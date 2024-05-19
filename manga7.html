@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chainsaw Man - Manga Reader</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: 'visby_round_cfbold';
+            src: url('visbyroundcf-bold-webfont.woff2') format('woff2'),
+            url('visbyroundcf-bold-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+    }
+
+    @font-face {
+            font-family: 'visby_round_cfbold';
+            src: url('visbyroundcf-bold-webfont.woff2') format('woff2'),
+            url('visbyroundcf-bold-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal; 
+        }
+        
+        .navbar-custom {
+  background-color: #1a1a1a;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white; /* Set the color of the navbar brand and links */
+}
+
+.navbar-custom .nav-link {
+  position: relative;
+}
+
+.navbar-custom .nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust this value to change the distance from the text */
+  width: 0;
+  height: 2px; /* Height of the line */
+  background-color: white; /* Color of the line */
+  transition: width 0.3s; /* Transition effect for the line */
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+    .content {
+      flex: 1;
+    }
+
+    .manga-container {
+      background-color: #2a2a2a;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 25px; /* Curved border */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+      color: white;
+      box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    }
+
+    .manga-image {
+      max-width: 100%;
+      height: auto;
+      max-height: 500px; /* Limiting the height of the image */
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    .manga-info {
+      margin-top: 20px;
+    }
+
+    .chapter-list a {
+      background-color: #2a2a2a;
+      color: white;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+      margin-top: 10px;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+      box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .chapter-list a:hover {
+      background-color: #006bb3;
+    }
+
+    .chapter-list {
+      margin-bottom: 40px; /* Increase space between chapters and footer */
+    }
+
+    footer {
+      background-color: #006bb3;
+      color: white;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <img src="./Covers/logo.png" alt="Logo" style="height: 60px; margin-right: 10px; width: 60px;"> 
+    <a class="navbar-brand" href="index.html">MangaTail</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="mangalist.html">Manga List <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8"> <!-- Increase the column width -->
+        <div class="manga-container">
+          <img src="./Covers/chainsaw-man-vol-12.jpg" alt="one punch" class="manga-image">
+          <h1 class="text-center">Chainsaw Man</h1>
+          <div class="manga-info">
+            <h2>Description</h2>
+            <p>Meet awkward high school student Asa Mitaka. She may have trouble getting along with her fellow students and the class pet devil chicken, but Asa has something special going for her. And it may lead her right to Chainsaw Man!</p>
+          </div>
+        </div>
+        <div class="chapter-list mt-4">
+          <h2 class="text-center">Chapters</h2>
+          <a href="#" class="text-center">Chapter 1</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2024 MangaReader. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

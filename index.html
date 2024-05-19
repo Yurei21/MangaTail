@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manga Tail</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: 'visby_round_cfbold';
+            src: url('visbyroundcf-bold-webfont.woff2') format('woff2'),
+            url('visbyroundcf-bold-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+    }
+
+    @font-face {
+            font-family: 'visby_round_cfbold';
+            src: url('visbyroundcf-bold-webfont.woff2') format('woff2'),
+            url('visbyroundcf-bold-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal; 
+        }
+        
+        .navbar-custom {
+  background-color: #006bb3;
+}
+
+.navbar-custom {
+  background-color: #1a1a1a;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white; /* Set the color of the navbar brand and links */
+}
+
+.navbar-custom .nav-link {
+  position: relative;
+}
+
+.browse-button {
+  display: block;
+  width: 75%;
+  margin: 0 auto 20px; /* Center and add margin below the cards */
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded corners */
+  background-color: #006bb3; /* Button color */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove default underline */
+  transition: background-color 0.3s; /* Smooth color transition */
+  text-align: center;
+}
+
+.browse-button:hover {
+  background-color: #00aaff; /* Darker color on hover */
+  color: white;
+}
+
+.navbar-custom .nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust this value to change the distance from the text */
+  width: 0;
+  height: 2px; /* Height of the line */
+  background-color: white; /* Color of the line */
+  transition: width 0.3s; /* Transition effect for the line */
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%; /* Full width on hover */
+}
+    .card,
+    .container {
+      border-radius: 25px; /* Rounded rectangle shape */
+    }
+
+    .card {
+      background-color: #2a2a2a;
+      color: white;
+    }
+
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    footer {
+      width: 100%;
+      bottom: 0;
+      background-color: #006bb3;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <img src="./Covers/logo.png" alt="Logo" style="height: 60px; margin-right: 10px; width: 60px;"> 
+    <a class="navbar-brand" href="index.html">MangaTail</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Mangalist.html">Manga List</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">Welcome to MangaTail</h1>
+        <p class="text-center">Read your favorite manga online</p>
+      </div>
+    </div>
+
+    <!-- Manga Grid -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="./Covers/Volume_26.webp" class="card-img-top" alt="Manga 1">
+          <div class="card-body">
+            <h5 class="card-title">Jujutsu Kaisen</h5>
+            <p class="card-text">By Gege Akutami</p>
+            <a href="manga1.html" class="btn btn-primary">Read Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="./Covers/Berserk.jpg" class="card-img-top" alt="Manga 2">
+          <div class="card-body">
+            <h5 class="card-title">Berserk</h5>
+            <p class="card-text">By Kentaro Miura</p>
+            <a href="manga2.html" class="btn btn-primary">Read Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="./Covers/vinland.png" class="card-img-top" alt="Manga 3">
+          <div class="card-body">
+            <h5 class="card-title">Vinland Saga</h5>
+            <p class="card-text">by Makoto Yukimura</p>
+            <a href="manga3.html" class="btn btn-primary">Read Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="Mangalist.html" class="browse-button">Browse Manga</a>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <p>&copy; 2024 MangaReader. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
