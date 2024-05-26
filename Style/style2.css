@@ -1,0 +1,109 @@
+
+body {
+  background-color: #1a1a1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'visby_round_cfbold';
+        src: url('visbyroundcf-bold-webfont.woff2') format('woff2'),
+        url('visbyroundcf-bold-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
+
+@font-face {
+        font-family: 'visby_round_cfbold';
+        src: url('visbyroundcf-bold-webfont.woff2') format('woff2'),
+        url('visbyroundcf-bold-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal; 
+    }
+
+    .navbar-custom {
+background-color: #1a1a1a;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+color: white; 
+}
+
+.navbar-custom .nav-link {
+position: relative;
+}
+
+.navbar-custom .nav-link::after {
+content: "";
+display: block;
+position: absolute;
+left: 0;
+bottom: -3px; 
+width: 0;
+height: 2px; 
+background-color: white; 
+transition: width 0.3s; 
+}
+
+.navbar-custom .nav-link:hover::after {
+width: 100%; 
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #2a2a2a;
+  border: none;
+  transition: transform 0.3s;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.card-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover img {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+.card:hover .card-title {
+  opacity: 1;
+}
+
+.content {
+  flex: 1;
+  margin-bottom: 50px; 
+}
+
+footer {
+  background-color: #006bb3;
+  color: white;
+  padding: 10px 0;
+}
